@@ -1,0 +1,39 @@
+/* 04-LAYOUT/_HEADER.SCSS
+==============================*/
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: $topbar-height;
+  background-color: $tb-background;
+  color: $white;
+  margin-left: $fullwidth-padding;
+  padding-top: $fullwidth-padding * 0.5;
+  @extend %grid;
+  grid-template-areas: templateRow(
+                          (11, "topnav", 2, "brand", 1, "srch")
+  );
+  @media (min-width: $tablet) {
+    grid-template-areas: templateRow(
+                            (11, "topnav", 2 , "brand", 3, "srch")
+    );
+  }
+
+  .logo {
+    grid-area: brand;
+  }
+
+  .topbar-nav-items {
+    grid-area: topnav;
+    margin-top: $topbar-padding-top;
+  }
+
+  .search {
+    grid-area: srch;
+    align-self: center;
+  }
+
+
+}

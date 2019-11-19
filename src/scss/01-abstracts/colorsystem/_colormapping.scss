@@ -1,0 +1,25 @@
+//==== colormapping.scss
+
+@function color($key: "blue") {
+  @return map-get($colors, $key);
+}
+
+@function brand-color($key: "primary") {
+  @return map-get($brand-colors, $key);
+}
+@function btn-color($key: "primary") {
+  @return map-get($btn-default-color, $key);
+}
+
+@function gray($key: "100") {
+  @return map-get($grays, $key);
+}
+
+
+@function brand-color-level($color-name: "primary", $level: 0) {
+  $color: brand-color($color-name);
+  $color-base: if($level > 0, $black, $white);
+  $level: abs($level);
+
+  @return mix($color-base, $color, $level * $brand-color-interval);
+}

@@ -1,0 +1,42 @@
+/* HEADER
+==============================*/
+$navheight:71px;
+#info-panel {
+  background:#000;
+  padding:10px 0;
+  position:fixed;
+  height:$navheight;
+  z-index:1000;
+}
+
+#logo {
+  float:left;
+  width:30%;
+}
+#navigation_header {
+  float:left;
+  width:70%;
+  margin-top:13px;
+}
+
+.navigation_footer {
+}
+
+@include media ($collapse) {
+  #logo {
+    width:83%;
+  }
+  #navigation_header {
+    width:17%;
+  }
+}
+@include media ($exsmall) {
+  #logo {
+
+    img {
+      max-width: 100%;
+      height:auto;
+    }
+  }
+
+}

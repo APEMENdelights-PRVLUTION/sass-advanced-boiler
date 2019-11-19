@@ -1,0 +1,21 @@
+
+
+// —————————————————————————————————————————————————————————
+//  Base URL v.1.0.1
+// —————————————————————————————————————————————————————————
+$base-urls:(
+        css : '',
+        url : '',
+        font: '',
+        img : ''
+) !default;
+$base-url: img !default;
+
+@function base-url($type-or-src, $src: null){
+  $path: map-get($base-urls, if(not $src,$base-url, $type-or-src));
+  @if not $path { @error 'base-url `#{$type-or-src}` is not defined in $base-urls!'; @return false;}
+  $src : if(not $src, $type-or-src, $src);
+  @return url($path + $src);
+}
+
+

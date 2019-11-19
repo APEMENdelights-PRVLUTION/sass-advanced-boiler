@@ -1,0 +1,17 @@
+/* ########### _LOGO.SCSS ####
+  ====================== */
+
+header{
+
+
+  .logo {
+    float: left;
+    background: center no-repeat;
+    max-height:    14px;
+    padding-right: 1em;
+    @include hide-text();
+    @include retinaImage("../assets/apemendelights-350.png", 250px 250px);
+
+  }
+
+}

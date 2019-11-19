@@ -1,0 +1,145 @@
+/* ====================================================================
+============================ COLOR SYSTEM =============================
+========================== TABLE OF CONTENT ===========================
+1. COLOR VARIABLES
+2. COLOR MAPS
+======================================================================*/
+
+$white:                 #f1f1f1;
+$gray-50:               #fafafa;          // MATERIAL GREY-50
+$gray-100:              #f5f5f5;          // MATERIAL GREY-100
+$gray-200:              #eeeeee;          // MATERIAL GREY-200
+$gray-300:              #e0e0e0;          // MATERIAL GREY-300
+$gray-400:              #bdbdbd;          // MATERIAL GREY-400
+$gray-500:              #9e9e9e;          // MATERIAL GREY-500
+$gray-600:              #757575;          // MATERIAL GREY-600
+$gray-700:              #616161;          // MATERIAL GREY-700
+$gray-800:              #424242;          // MATERIAL GREY-800
+$gray-900:              #212121;          // MATERIAL GREY-900
+$gray-950:              #1a1a1a;          // MATERIAL GREY-900
+$gray-000:              #121212;          // MATERIAL GREY-900
+$black:                 #000000;
+
+$red-light:             #ff8a80;          // MATERIAL RED-A200
+$red:                   #d50000;          // MATERIAL RED-A700
+$pink-light:            #ffade3;          // PANTONE 920
+$pink:                  #ff3eb5;          // PANTONE 807
+$pink-deep:             #880e4f;          // MATERIAL PINK-900
+$purple-light:          #f8e0fc;          // MATERIAL PURPLE-A100
+$purple:                #9c27b0;          // MATERIAL PURPLE-500
+$purple-deep:           #651fff;          // MATERIAL DEEP-PURPLE-A400
+$indigo:                #304ffe;          // MATERIAL INDIGO-A700
+$blue:                  #2962ff;          // MATERIAL BLUE-A700
+$blue-light:             #0091ea;          // MATERIAL LIGHT-BLUE-A700
+$cyan-light:            #b2ebf2;          // MATERIAL CYAN-200
+$cyan:                  #18ffff;          // MATERIAL CYAN-A200
+$teal-light:            #b2dfdb;          // MATERIAL TEAL-200
+$teal:                  #1de9b6;          // MATERIAL TEAL-A200
+$teal-deep:             #00695c;          // MATERIAL TEAL-800
+$green:                 #00e676;          // MATERIAL GREEN-A400
+$green-light:           #76ff03;          // MATERIAL LIGHT-GREEN-A400
+$lime:                  #c6ff00;          // MATERIAL LIME-A400
+$yellow:                #ffff00;          // MATERIAL YELLOW-A200
+$yellow-light:          #ffff8d;          // MATERIAL LIGHT-YELLOW-A100
+$amber:                 #ffab00;          // MATERIAL AMBER-A700
+$orange:                #ff9100;          // MATERIAL ORANGE-A400
+$orange-deep:           #ff3d00;          // MATERIAL DEEP-ORANGE-A400
+
+// === 2 brand-color variables
+
+$primary:               $pink;
+$primary-light:         $pink-light;
+$primary-dark:          $pink-deep;
+$secondary:             $teal;
+$secondary-light:       $teal-light;
+$secondary-dark:        $teal-deep;
+$accent:                $pink-light;
+$accent-light:          $purple-light;
+$success:               $green-light;
+$info:                  $cyan;
+$warning:               $yellow;
+$note:                  $amber;
+$danger:                $red;
+$mute:                  $purple;
+$light:                 $gray-300;
+$lighter:               $gray-100;
+$dark:                  $gray-900;
+$darker:                $gray-950;
+$darkest:               $gray-000;
+
+/* ============================= COLOR MAPS ============================
+ * 1. $colors
+ * 2. $brand-colors
+===================================================================== */
+
+// === 1 $colors
+
+$colors: (); /* 1 */
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+    (
+      "white":        $white,
+      "black":        $black,
+      "red":          $red,
+      "pink":         $pink,
+      "pink-deep":    $pink-deep,
+      "purple":       $purple,
+      "purple-light": $purple-light,
+      "purple-deep":  $purple-deep,
+      "indigo":       $indigo,
+      "blue":         $blue,
+      "lightblue": $blue-light,
+      "cyan":         $cyan,
+      "teal":         $teal,
+      "green":        $green,
+      "green-light":  $green-light,
+      "lime":         $lime,
+      "yellow":       $yellow,
+      "yellow-light": $yellow-light,
+      "amber":        $amber,
+      "orange":       $orange,
+      "orange-deep":  $orange-deep
+    ),
+    $colors
+);
+
+// === 2 $theme-colors
+
+
+$brand-colors: () ; /* 2 */
+// stylelint-disable-next-line scss/dollar-variable-default
+$brand-colors: map-merge(
+    (
+      "primary":          $primary,
+      "primary-light":    $primary-light,
+      "primary-dark":     $primary-dark,
+      "secondary":        $secondary,
+      "secondary-light":  $secondary-light,
+      "secondary-dark":   $secondary-dark,
+      "accent":           $accent,
+      "accent-light":     $accent-light,
+      "success":          $success,
+      "info":             $info,
+      "warning":          $warning,
+      "note":             $note,
+      "danger":           $danger,
+      "mute":             $mute,
+      "light":            $light,
+      "lighter":          $lighter,
+      "dark":             $dark,
+      "darker":           $darker,
+      "darkest":          $darkest
+    ),
+    $brand-colors
+);
+
+// Set a specific jump point for requesting color jumps
+$brand-color-interval:      8%;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:  150;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:             $gray-900;
+$yiq-text-light:            $white;
+

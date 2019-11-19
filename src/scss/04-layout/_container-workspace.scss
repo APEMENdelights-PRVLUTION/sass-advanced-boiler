@@ -1,0 +1,84 @@
+/* 04-LAYOUT/_CONTAINER-WORKSPACE.SCSS
+==============================*/
+
+
+$min-height-row:  80px;
+$max-height-row:  140px;
+$max-width-workspace:  85px;
+$max-height-workspace: $max-height-row * 1.4;
+
+.work-row-1,
+.work-row-2 {
+  flex-wrap: wrap;
+  align-content: flex;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+}
+.work-row-1 {
+  justify-content: center;
+  min-height:$max-height-row;
+  margin-top: 1%;
+  padding-bottom: 1%;
+}
+
+.work-row-2 {
+  justify-content: flex-end;
+  min-height: $min-height-row;
+  padding-top: 1em ;
+}
+
+
+.workspace,
+.workspace-1 {
+  background-color: $boxlayer-0;
+  margin-right: 4px;
+  border-color: $info-muted;
+  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  max-width: $max-width-workspace;
+  max-height: $max-height-workspace;
+  min-height: 4em;
+  min-width: 20em;
+  text-align: justify;
+  font-size: smaller;
+  padding: 1.1em 1.2em 1.1em 1.1em;
+  h6{
+    color: $primary-electric;
+    font-size: medium;
+    text-transform: uppercase;
+  }
+  &:hover{
+    h6{
+      color: $primary;
+    }
+  }
+  @include highlightThis();
+  @include shine();
+}
+
+
+
+.workspace {
+  margin-top: 10px;
+  font-size: smaller;
+}
+
+.workspace-1 {
+  margin-top: 5px;
+  margin-left: 4px;
+  align-content: end;
+  h5{
+    color: $primary-electric;
+    font-size: large;
+    text-transform: uppercase;
+  }
+  &:hover {
+    h5 {
+      color: $primary;
+    }
+  }
+}
+

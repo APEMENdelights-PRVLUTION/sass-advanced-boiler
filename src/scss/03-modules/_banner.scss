@@ -1,0 +1,185 @@
+/* ===##################### _BANNER.SCSS
+===========================================*/
+
+.banner {
+  position:relative;
+  .banner_shade {
+    top:0;
+    position:absolute;
+    height:100%;
+    width:100%;
+    @include media ($small) {
+      background:rgba(black,0.3);
+    }
+  }
+
+}
+
+.banner img.banner_image {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+}
+
+.banner_text {
+  width:400px;
+  float:right;
+  margin-top:20px;
+  @include media ($smaller) {
+    width:100%;
+  }
+}
+.banner_text_offset {
+  margin-top:70px;
+
+}
+.banner_text h1 {
+  color:#fff;
+  font-size:40px;
+  line-height:56px;
+  font-weight:400;
+  font-family:'akzidenzgrotesklight',Arial,Helvetica,sans-serif;
+  @include media ($smaller) {
+    //font-size:30px;
+    //line-height:36px;
+  }
+
+}
+
+.buttons_banner {
+  width:400px;
+  margin-top:53px;
+  float:right;
+  @include media ($smaller) {
+    width:100%;
+    margin-top:20px;
+  }
+}
+
+#banner_text_page {
+  margin-top:98px;
+  position:relative;
+}
+.banner_icon {
+  position:absolute;
+  top: 285px;
+  left: 7px;
+  @include media ($small) {
+    display:none;
+  }
+}
+#banner_trial #banner_text_page {
+  margin-top:25px;
+
+}
+#banner_text_page h1 {
+  font-size:33px;
+  line-height:44px;
+  margin-bottom:10px;
+  font-family:'akzidenzgroteskbold',Arial,Helvetica,sans-serif;
+}
+
+#banner_text_page ul {
+  margin:10px 20px;
+}
+
+#banner_text_page ul li {
+  line-height:24px;
+
+
+  color:#fff;
+}
+
+#banner_text_page p {
+  font-size:18px;
+  margin-bottom:20px;
+  font-family:'akzidenzgroteskregular',Arial,Helvetica,sans-serif;
+  line-height:20px;
+  color:#fff;
+}
+
+#banner_text_page p em {
+  width:15px;
+  display:inline-block;
+  float:left;
+  height:70px;
+  border:1px solid transparent;
+}
+
+#banner_text_page p strong {
+  color:#fff;
+  /*font-family: "akzidenzgroteskbold";*/
+  font-size:16px;
+}
+
+#banner_text_page p span {
+  font-family:'akzidenzgrotesklight',Arial,Helvetica,sans-serif;
+  margin-top:10px;
+  display:block;
+}
+
+#banner_text_page p.banner_text2 {
+  margin-left:60px;
+  @include media ($small) {
+    margin-left:10px;
+  }
+}
+
+.banner_text_dark h1,
+.banner_text_dark p {
+  color:#333 !important;
+  @include media ($small) {
+    color:#fff !important;
+  }
+}
+.banner_text_dark p {
+  line-height:24px !important;
+}
+#banner_home {
+  height:388px;
+  background:#4d4d4d url(../images/banner/banner_home.jpg) no-repeat center;
+}
+
+#banner_pricing {
+  background:#999 url(../images/banner/banner_pricing_3.jpg) no-repeat center;
+  height:630px;
+}
+
+#banner_analysis {
+  padding-top:40px;
+  background:#e6e6e6 url(../images/banner/banner_analysis.jpg) no-repeat center;
+  height:385px;
+}
+
+#banner_trial {
+  background: #e6e6e6 url(../images/banner/banner_trial.jpg) no-repeat center;
+  height:495px;
+}
+
+#banner_brochure {
+  background: url(../images/banner/banner_brochure_3.jpg) no-repeat center;
+  height:497px;
+}
+#banner_brochure_ana {
+  background: url(../images/banner/banner_brochure_ana_3.jpg) no-repeat center;
+  height:497px;
+}
+
+.banner_outer_gr {
+  float: left;
+  width: 100%;
+  background: #dbdbdb; /* Old browsers */
+  background: -moz-linear-gradient(left,  #dbdbdb 0%, #dbdbdb 50%, #b5b6b4 50%, #b5b6b4 50%, #b5b6b4 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#dbdbdb), color-stop(50%,#dbdbdb), color-stop(50%,#b5b6b4), color-stop(50%,#b5b6b4), color-stop(100%,#b5b6b4)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #dbdbdb 0%,#dbdbdb 50%,#b5b6b4 50%,#b5b6b4 50%,#b5b6b4 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #dbdbdb 0%,#dbdbdb 50%,#b5b6b4 50%,#b5b6b4 50%,#b5b6b4 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #dbdbdb 0%,#dbdbdb 50%,#b5b6b4 50%,#b5b6b4 50%,#b5b6b4 100%); /* IE10+ */
+  background: linear-gradient(to right,  #dbdbdb 0%,#dbdbdb 50%,#b5b6b4 50%,#b5b6b4 50%,#b5b6b4 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#b5b6b4',GradientType=1 ); /* IE6-9 */
+}
+.banner_trial_topper {
+  height:57px;
+
+}
+

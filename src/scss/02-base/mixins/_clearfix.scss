@@ -1,0 +1,27 @@
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+//Floatfix (to be phased out)
+@mixin floatfix {
+  width:100%;
+  float:left;
+  display:block;
+}
+
+@mixin clearfixtable {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+//Usage
+//.container-with-floated-children {
+//@extend %clearfix;
+//}

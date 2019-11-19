@@ -1,0 +1,173 @@
+
+/* ===##################### _TYPOGRAPHICS.SCSS
+===========================================*/
+
+
+@include font-face (
+                "agbuchbq-boldoutline",
+                "../../assets/fonts/agbuchbq-boldoutline",
+                        ("woff2", "woff", "eot", "ttf", "svg")
+);
+
+
+@include font-face (
+                "akzidenz-grotesk-bold",
+                "../../assets/fonts/akzidenz-grotesk-bold",
+                        ("woff2", "woff", "eot", "ttf", "svg")
+);
+
+
+@include font-face (
+                "akzidenz-grotesk-light",
+                "../../assets/fonts/akzidenz-grotesk-light",
+                        ("woff2", "woff", "eot", "ttf", "svg")
+);
+
+@include font-face (
+                "sf-ui-text-light",
+                "../../assets/fonts/sf-ui-text-light",
+                        ("woff2", "woff", "eot", "ttf", "svg")
+);
+@include font-face (
+                'wintersolstice',
+                "../../assets/fonts/wintersolstice",
+                        ("woff2", "woff", "eot", "ttf", "svg")
+);
+@include font-face (
+                'starcraftnormal',
+                "../../assets/fonts/starcraft",
+                        ("woff2", "woff", "eot", "ttf", "svg")
+);
+@include font-face (
+                'space_ageregular',
+                "../../assets/fonts/spaceage",
+                        ("woff2", "woff", "eot", "ttf", "svg")
+);
+
+$wintersoldier:                         'wintersolstice', sans-serif;
+$starcraft:                             'starcraft_normal', sans-serif;
+$spaceage:                             'space_ageregular', sans-serif;
+$ag-outline:                            'agbuchbq-boldoutline', sans-serif;
+$ag-bold:                               'akzidenz-grotesk-bold', sans-serif;
+$ui-text-light:                         'sf-ui-text-light', sans-serif;
+
+
+$font-heading-safe:                     'Montserrat', sans-serif;
+$font-heading-xl:                       $ag-bold;
+$font-heading-lg:                       $ag-outline;
+$font-heading-md:                       $ag-bold;
+$font-heading-sm:                       $font-heading-md;
+
+$font-intro:                            $font-heading-lg;
+$font-text:                             $ui-text-light,Arial,Helvetica,sans-serif;
+
+$font-family-base:                     $font-text, OpenSans, sans-serif;
+//$font-family-sans-serif:               $font-family-base;
+//$font-family-serif:                    Georgia, "Times New Roman", Times, serif;
+
+$font-size-xs:                         0.75rem; // 12px according to google accessibility https://www.thinkwithgoogle.com/intl/en-gb/consumer-insights/build-a-great-user-experience/
+$font-size-sm:                         $font-size-xs * 1.25; // 15 (relation to min - min,n,m = text blocks)
+$font-size-md:                         $font-size-sm * 1.2; // 18 (relation to m - min,n,m = text blocks)
+$font-size-lg:                         $font-size-xs * 2; // 24 (relation to min - dif ratio between headlines & text blocks)
+$font-size-xl:                         $font-size-lg * 1.25; // 30 (relation to min - dif ratio between headlines & text blocks)
+$font-size-max:                        $font-size-xl * 1.2; // 36 (relation to xl -
+
+$font-size-base:                        $font-size-sm;
+
+
+$font-weight-xs:                     100;
+$font-weight-sm:                     200;
+$font-weight-md:                     300;
+$font-weight-lg:                     400;
+$font-weight-xl:                     700;
+$font-weight-max:                    800;
+$font-weight-heavy:                  900;
+
+$font-weight-base:                    $font-weight-md;
+
+$line-height-min:                    $font-size-xs;         //  12
+$line-height-m:                      $font-size-sm * 1.4;     //  21
+$line-height-l:                      $font-size-md * 1.4;     //
+$line-h-xl:                          $font-size-lg * 1.4;    // 42
+$line-h-xxl:                         $font-size-lg * 1.4;    // 42
+$line-h-max:                         $font-size-xl * 1.25;  // 45
+
+
+
+body{
+  font-family:      $font-family-base;
+  font-size:        $font-size-base;
+  line-height:      $line-height-m;
+}
+
+
+h1, h2, h3, h4 {
+  font-weight: $font-weight-heavy;
+  font-family: $font-heading-xl;
+  color:        $black;
+}
+
+h1 {
+  //@include headline-font-variant();
+  font-family: $font-heading-xl;
+  font-size: $font-size-xl;
+}
+
+h2 {
+  font-size: $font-size-lg;
+}
+
+h3 {
+  font-size: $font-size-md;
+
+
+}
+
+h4 {
+  font-size: $font-size-sm;
+
+}
+
+strong {font-weight: 600;}
+
+
+
+p{
+  font-family:  $font-text;
+  font-size: $font-size-sm;
+  line-height:  $line-height-min;
+  margin: 0 0 $font-size-sm 0;
+
+  .introduction{
+    font-family: $font-intro;
+    font-weight: $font-weight-xl;
+
+    strong{
+      text-transform: uppercase;
+
+    }
+  }
+}
+
+
+small{
+  font-size: $font-size-xs;
+  line-height: $line-height-min;
+  a{
+    font-weight: $font-weight-xl;
+    color: $body-color;
+    &:hover{
+      color: $link-hover-color;
+    }
+  }
+}
+
+.small {
+  display: block;
+  margin-top: 10px;
+  padding-top: 10px;
+  color: $secondary;
+  font-size: 0.85em;
+  border-top: 1px dashed #ccc;
+  -webkit-text-size-adjust: none;
+}

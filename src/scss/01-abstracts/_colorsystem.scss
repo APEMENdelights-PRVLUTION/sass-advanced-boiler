@@ -1,0 +1,115 @@
+/* ########### _COLORSYSTEM.SCSS ####
+  ====================== */
+@import "colorsystem/colormapping";
+@import "colorsystem/colormaps";
+
+//============================ COLORSYSTEM.SCSS
+
+$enable-shadows:	                true;
+$enable-hover-media-query:          true;
+
+$color-percent:           2.5%;
+$color-lt-percent:        3.0%;
+$color-dk-percent:        3.5%;
+
+
+// === Main
+$boxlayer-0:              $gray-000;
+$boxlayer-1:              $gray-900;
+$boxlayer-2:              $gray-750;
+$boxlayer-3:              $gray-600;
+$boxlayer-4:              $gray-450;
+$boxlayer-5:              $gray-250;
+
+$boxcolor-1:              $gray-150;
+$boxcolor-2:              $gray-50;
+$boxcolor-3:              $gray-00;
+
+$body-bg:                 $boxlayer-5;
+$body-color:              $boxlayer-0;
+$mark-bg:                 invert(90%);
+
+$border-color:            $boxlayer-3;
+$divider-color:           $border-color;
+$border-color-l:	 	  rgba($border-color, 0.13);
+$border-color-lt:	      rgba($border-color, 0.065);
+$border-color-ltr:	      rgba($border-color, 0.045);
+
+$box-shadow-lg:           0 1rem 3rem rgba($black, .175);
+$box-shadow:              0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm:           0 .125rem .25rem rgba($black, .075);
+$kbd-box-shadow:          inset 0 -.1rem 0 rgba($black, .25);
+
+
+
+// ==== Activity
+$comp-active-color:       $white;
+$comp-active-bg:          brand-color("primary") ;
+
+// === Link styling
+$link-color:              $primary;
+$link-hover-color:       $primary-light;
+$link-active-color:       $primary-electric;
+$link-decoration:         none;
+$link-hover-decoration:   none;
+
+
+$headline-color:          null;
+$headline-color-variant:  $accent-light;
+$text-muted:              $gray-600;
+$blockquote-small-color:  $gray-600;
+$hover-color: 			  inherit;
+
+
+// === TOPBAR COLORS
+$tb-background:           none;
+$tb-link-color:           $link-color;
+$tb-link-hover:           $link-hover-color;
+$tb-link-decor:           none;
+$tb-border-width:         none;
+$tb-border-color:         transparent;
+$tb-border-style:         none;
+
+// === SIDEBAR COLORS
+$sidebar-bg:           transparentize($boxlayer-0,0.2);
+$sidebar-bg-hover:           transparentize($boxlayer-0,0.4);
+$sb-link-color:           $link-color;
+$sb-link-hover:           $link-hover-color;
+$sb-link-decor:           none;
+
+// == COLUMN COLORS
+$columns-background:            transparentize($boxlayer-2,0.1);
+$columns-background-hover:      $boxlayer-1;
+
+// === FOOTER COLORS
+$footer-background: $sidebar-bg;
+$footer-link-color:               $link-color;
+$footer-link-hover:               $link-hover-color;
+$footer-link-decor:               none;
+
+
+// Depth
+$top-shadow:                      white;
+$bottom-shadow:                   5;
+$shadowOffsetsTop:                3;
+$shadowOffsetsBottom:             1;
+$shadowBlursTop:                  3;
+$shadowBlursBottom:               3;
+$shadowOpacitiesTop:              .7;
+$shadowOpacitiesBottom:           .7;
+
+
+
+
+// === Layout sections
+$input-border:                    rgba(120, 130, 140, 0.2);
+$input-border-focus:              rgba(120, 130, 140, 0.3);
+$input-border-radius:             0;
+$input-btn-focus-color:           rgba($comp-active-bg, .25);
+$input-btn-focus-box-shadow:      shade($input-btn-focus-color, 0.8);
+
+
+$table-border-color:              $border-color-ltr;
+$table-striped-color:             rgba(0, 0, 0, 0.025);
+$list-group-border:				  $border-color-lt;
+

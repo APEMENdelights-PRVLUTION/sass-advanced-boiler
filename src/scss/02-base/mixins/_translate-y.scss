@@ -1,0 +1,16 @@
+@mixin liftcontrol-md(){
+  transition: transform 2000ms*0.25 cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  &:hover{
+    transform: translatey(-0.5rem);
+  }
+  &:active{
+    transform: translatey(-1rem);
+  }
+}
+
+@mixin liftcontrol-sm(){
+  transition: transform 2000ms*0.25 cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  &:hover{
+    transform: translatey(-0.5rem);
+  }
+}

@@ -1,0 +1,78 @@
+/* ===##################### _BASE.SCSS
+===========================================*/
+
+*,
+*:after,
+*::before {
+  -webkit-box-sizing:border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing:border-box;
+  /* Firefox, other Gecko */
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+html,
+body{
+  overflow: -moz-scrollbars-none;
+  ::-webkit-scrollbar { width: 0 !important };
+  -ms-overflow-style: none;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: $body-bg !important;
+}
+
+
+html,
+body,
+.push-container,
+.pusher,
+.push-content,
+.pt-main{
+  display:          flex;
+  flex-direction:   column;
+  background-color: $body-bg;
+  color:            $body-color;
+  min-width:        100%;
+  min-height:       100%;
+  margin:           0;
+}
+
+
+
+a {
+  font-family: $font-heading-md;
+  text-decoration:none;
+  color: $link-color;
+  &:hover{
+    color: $link-hover-color;
+  }
+  &:active{
+    color: $link-active-color;
+  }
+}
+
+
+hr {
+  border: 0;
+  height: 1px;
+  background: darken($divider-color,10);
+  float:left;
+  width:100%;
+  margin-top:20px;
+  margin-bottom:30px;
+}
+
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+

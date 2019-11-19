@@ -1,0 +1,82 @@
+## mySASS ADVANCED
+
+MASSIVE SASS STARTER PACK. THIS PACK WAS BUILD USING THE 7-1 FILE ARCHITECTURE 
+FOR MODERN  AND EASY IN MAINTENANCE FILE SYSTEMATIC.
+I AM HIGHLY RECOMMENDING READING AND USING THE SASS
+GUIDELINES:
+
+###### INTERNATIONAL VERSION
+https://sass-guidelin.es/
+###### GERMAN VERSION 
+https://sass-guidelin.es/de/
+
+#### Filestructure of src/scss
+- 01-abstracts/
+- 02-base/
+- 03-components/
+- 04-layout/
+- 05-states/ 
+- 06-themes/
+- 07-vendors/
+
+main.scss
+
+##### INCLUDING:
+- MASSIVE MIXIN PACK
+- CSS GRID FILES
+- COLORSYSTEM
+- AWESOME SIDEBAR TRANSITIONS
+- 3D OBJECT BOUNCING
+- 7 UI FONT-FAMILIES (commercial license not included)
+- 7 UI ICON-FONT (commercial license not included)
+
+##### MASSIVE MIXIN PACK incl.: 
+- animate-css sass version
+- simple url base
+- clearfixes
+- fast-normalize
+- fast-reset
+- colorstyles
+- z-indexication
+- shinig boxes
+- demo mode
+- font-face handling (+ advanced file)
+- map-prefixings
+- massive gradient collections
+- glow
+- depth
+- better opacity
+- retina
+- auto push content
+ 
+...and many many more
+
+
+##### CSS GRID SCSS FILES
+- CSS FLEXGRID SCSS FILE
+- CSS3 GRID SCSS FILE
+
+
+##### AWESOME COLORSYSTEM incl.: 
+- colormapping
+- material colors
+- pantone-neon colors 
+- material-design-colors)
+
+##### UI FONT-FAMILIES
+- agbuch-boldoutline
+- akzidenz-grotesk-bold
+- akzidenz-grotesk-light
+- sf-ui-text
+- spaceage
+- starcraft (original font)
+- wintersolstice (wintersoldier adaption)
+
+##### UI ICON-FONTS
+- dropsicons (shared by codrops)
+- flaticon-essentials
+- flaticon-multimedia-collection
+- linecons
+- menuicons
+- simple-line-icons
+- unicons

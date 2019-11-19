@@ -1,0 +1,10 @@
+/* ########### _TABLES.SCSS ####
+  ====================== */
+table {
+  border-collapse: collapse;
+  width:100%;
+  @include media ($small) {
+    overflow-x: auto;
+    display: block;
+  }
+}

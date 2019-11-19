@@ -1,0 +1,118 @@
+/* 04-LAYOUT/_FLEX-RESPONSIVE.SCSS
+==============================*/
+
+
+/* Media base classes mobile first */
+.two-columns > .flexible {
+  flex: 0 0 100%;
+}
+
+.three-columns > .flexible {
+  flex: 0 0 100%;
+}
+
+.four-columns > .flexible {
+  flex: 0 0 100%;
+}
+
+.six-columns > .flexible {
+  flex: 0 0 calc(50% - #{$flexgrid-gap-y});
+}
+
+.twelve-columns > .flexible {
+  flex: 0 0 calc(33.3333% - #{$flexgrid-gap-y});
+}
+/* use the grid-dynamic class for multi row/column layout
+   containing nested media content
+ */
+
+.grid-dynamic {
+  .aside, .inner {
+    flex: 1 100%;
+  }
+}
+
+/* Float 1 of 4 --  flex box columns*/
+.float-1-2 > .flexible,
+.float-1-4 > .flexible:first-of-type,
+.float-1-3 > .flexible:first-of-type{
+  flex: 0 0 100%;
+}
+.float-1-6 > .flexible:first-of-type {
+  flex: 0 0 50%;
+}
+
+.flex-fit > .flexible {
+  flex: 1;
+}
+.flex-fill > .flexible {
+  flex: 0 0 100%;
+}
+
+/* Tablet (medium) screens */
+@media (min-width: 30em) {
+  .four-columns > .flexible {
+    flex: 0 0 calc(50% - #{$flexgrid-gap-y});
+  }
+  .six-columns > .flexible {
+    flex: 0 0 calc(33.3333% - #{$flexgrid-gap-y});
+  }
+  .twelve-columns > .flexible {
+    flex: 0 0 calc(16.6666% - #{$flexgrid-gap-y});
+  }
+  .grid-dynamic {
+    .aside {
+      flex: 1 calc(25% - #{$flexgrid-gap-y});
+    }
+  }
+  .float-1-2 > .flexible {
+    flex: 0 0 50%;
+  }
+  .float-1-6 > .flexible:first-of-type {
+    flex: 0 0 30%;
+  }
+  .float-1-4 > .flexible:first-of-type {
+    flex: 0 0 50%;
+  }
+  .float-1-3 > .flexible:first-of-type {
+    flex: 0 0 100%;
+  }
+}
+
+/* Large screens */
+@media (min-width: 48em) {
+  .two-columns > .flexible,
+  .three-columns > .flexible,
+  .four-columns > .flexible,
+  .six-columns > .flexible,
+  .twelve-columns > .flexible{
+    flex: 1;
+  }
+  .grid-dynamic {
+    .inner    { flex: 2; }
+    .aside   { flex: 1; }
+    .aside-1 { order: 1; }
+    .inner    { order: 2; }
+    .aside-2 { order: 3; }
+  }
+  .float-1-2 > .flexible {
+    flex: 0 0 50%;
+  }
+  .float-1-6 > .flexible:first-of-type {
+    flex: 0 0 16.6666%;
+  }
+  .float-1-4 > .flexible:first-of-type {
+    flex: 0 0 25%;
+  }
+  .float-1-3 > .flexible:first-of-type {
+    flex: 0 0 30%;
+  }
+  .rasterized.nested {
+    .flexible:first-of-type {
+      .flex-box {
+        margin-right: 0;
+      }
+    }
+  }
+}
+

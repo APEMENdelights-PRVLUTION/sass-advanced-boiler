@@ -1,0 +1,74 @@
+/* ########### _BUTTON.SCSS ####
+  ====================== */
+
+
+
+
+.btn{
+  font-family: $font-family-base;
+}
+
+
+.btn-zoom {
+  display:                  block;
+  float:                    left;
+  margin-left:              3px;
+  padding:                  3px 4px 3px 4px;
+  background:               $boxlayer-0;
+  color:                    $primary-electric;
+  border:                   1px solid $primary;
+  border-radius:            $border-radius * 0.6;
+  box-shadow:               inset 0 1px 1px rgba($primary-electric, 0.2), 0 1px 1px rgba($primary, 0.4);
+  text-transform:           uppercase;
+  text-align:               center;
+  text-shadow:              0 1px 1px lighten($primary, 0.2);
+  font-size:                12px;
+  text-decoration:          none;
+  letter-spacing:           1px;
+  -webkit-transition:       all 500ms;
+
+  @include zoomText();
+
+  &:active {
+    background:   $info;
+    color:        $body-bg;
+  }
+}
+
+
+
+.btn-shine, .btn-shine-sm{
+  font-family: $font-heading-sm;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  &:hover{
+    text-decoration: none !important;
+
+  }
+}
+
+.btn-shine {
+  border: 1px solid $primary-electric;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: $border-radius;
+  font-size: small;
+  @include shinig();
+}
+
+.btn-shine-sm {
+  border: 1px solid $primary-electric;
+  align-content: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: $border-radius;
+  font-size: $font-size-xs;
+  @include shinig();
+}

@@ -1,0 +1,30 @@
+@mixin highlightThis{
+  &:hover {
+    -webkit-transition: color 800ms ease-in;
+    -ms-transition: color 800ms ease-in;
+    transition: color 800ms ease-in;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    border-color: $info;
+  }
+  &:hover {
+    background-color: $black;
+    -webkit-transition: background-color 1200ms ease-in;
+    -ms-transition: background-color 1200ms ease-in;
+    transition: background-color 1200ms ease-in;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+}
+
+@mixin zoomText{
+  &:hover {
+    letter-spacing: 1px;
+    -webkit-transition: all 500ms;
+    background: $black;
+    color: $info;
+    padding: 6px 16px 6px 16px;
+    border-color: lighten($info, 0.1);
+    //font-size: 14px;
+    text-decoration: none;
+    box-shadow: inset 0 1px 1px lighten($info, 0.7), 0 1px 1px lighten($info, 0.7);
+  }
+}

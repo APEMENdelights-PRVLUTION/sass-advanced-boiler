@@ -1,0 +1,55 @@
+//$enable-demo-modus: true;
+
+//
+@mixin demo-element-1{
+  @if $enable-demo-modus {
+    min-height: 120px;
+    background-color: transparentize(blueviolet, 0.7);
+    @include glow-dynamically(none, glowing-primary, $primary-electric);
+  }
+}
+
+@mixin demo-element-2{
+  @if $enable-demo-modus {
+    min-height: 120px;
+
+    background-color: transparentize(gold, 0.7);
+    @include glow-dynamically(none, glowing-secondary, $primary-electric);
+  }
+}
+
+@mixin demo-element-3{
+
+  @if $enable-demo-modus {
+    min-height: 120px;
+
+    background-color: transparentize(red, 0.7);
+    @include glow-dynamically(none, glowing-accent, $primary-electric);
+  }
+}
+
+@mixin demo-element-4{
+  @if $enable-demo-modus {
+    min-height: 120px;
+
+    background-color: transparentize(cornflowerblue, 0.7);
+    @include glow-dynamically(none, glowing-primary, $primary-electric);
+  }
+}
+
+@mixin demo-element-5{
+  @if $enable-demo-modus {
+    min-height: 120px;
+
+    background-color: transparentize(green, 0.7);
+    @include glow-dynamically(none, glowing-primary, $primary-electric);
+  }
+}
+
+@mixin demo-element-6{
+  @if $enable-demo-modus {
+    min-height: 120px;
+    background-color: transparentize(orange, 0.7);
+    @include glow-dynamically(none, glowing-primary, $primary-electric);
+  }
+}

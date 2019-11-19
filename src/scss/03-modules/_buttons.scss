@@ -1,0 +1,64 @@
+/* ===##################### _BUTTONS.SCSS
+===========================================*/
+
+.btn-special-md, .btn-special-sm{
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+
+  background: rgba(0,0,0,0.2);
+  z-index: 2;
+  color: $white;
+  border-top: $border-width-arcade solid $blue;
+  border-bottom: $border-width-arcade solid $purple;
+  box-shadow: 0 1rem 2rem 0.2rem rgba($purple,0.2);
+
+}
+
+.btn-special-sm{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.65rem;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  padding: 0.4em 0.6em 0.4em 0.6em;
+  @include liftcontrol-sm();
+}
+
+.btn-special-md{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  padding: 0.4em 0.3em 0.4em 0.3em;
+  @include liftcontrol-md();
+}
+
+.btn-expressive {
+  --h: 2em;
+  --hl: 0;
+  box-sizing: border-box;
+  border: solid $border-width-md transparent;
+  margin: .5em;
+  padding: calc(#{$border-width-md} + #{$border-width-xs});
+  width: var(--w, var(--h));
+  height: var(--h);
+  border-radius: var(--r, 50%);
+  box-shadow: inset 0 0 0 $border-width-xs #060606;
+  background:
+          linear-gradient($info, white) content-box,
+          linear-gradient($primary-electric, $primary-dark) padding-box,
+          linear-gradient(#969696, #fbfbfb) border-box;
+  font: inherit;
+  filter: sepia(var(--hl)) hue-rotate(90deg);
+  transition: filter .7s;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    --hl: 1;
+    outline: solid 0 transparent
+  }
+}

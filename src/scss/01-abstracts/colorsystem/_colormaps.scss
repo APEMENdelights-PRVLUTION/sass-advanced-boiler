@@ -1,0 +1,210 @@
+// === colormaps.scss
+
+$white:               #ffffff !default;
+$gray-00:             #f9f9f9 !default;
+$gray-50:             #d6d6d6 !default;
+$gray-100:            #909090 !default;
+$gray-150:            #8a8a8a !default;
+$gray-200:            #7d7d7d !default;
+$gray-250:            #717171 !default;
+$gray-300:            #63666a !default;
+$gray-350:            #5e5e5e !default;
+$gray-400:            #515151 !default;
+$gray-450:            #4c4c4c !default;
+$gray-500:            #404040 !default;
+$gray-550:            #3d3d3d !default;
+$gray-600:            #333333 !default;
+$gray-650:            #2c2c2c !default;
+$gray-700:            #2a2a2a !default;
+$gray-750:            #222222 !default;
+$gray-800:            #202020 !default;
+$gray-850:            #1c1c1c !default;
+$gray-900:            #191919 !default;
+$gray-950:            #1a1a1a !default;
+$gray-000:            #121212 !default;
+$black:               #000000 !default;
+
+
+
+$red:                 #d50000 !default;
+$red-light:           #ef9a9a !default;
+$red-electric:        #ff0900 !default;
+$red-deep:            #b71c1c !default;
+$pink:                #ff0099 !default;
+$pink-light:          #f0a1d5 !default;
+$pink-electric:       #e900b6 !default;
+$pink-deep:           #7f004c !default;
+$purple:                 #7b29ff !default;
+$purple-light:        #cc86ff !default;
+$purple-electric:     #9d00ff !default;
+$purple-deep:         #4C1356 !default;
+$violet:              #7c4dff !default;
+$violet-light:        #b39ddb !default;
+$violet-electric:     #6e00ff !default;
+$violet-deep:         #311b92 !default;
+$indigo:              #2962ff !default;
+$indigo-light:        #9fa8da !default;
+$indigo-electric:     #304ffe !default;
+$indigo-deep:         #1a237e !default;
+$blue:                #304ffe !default;
+$blue-light:          #90caf9 !default;
+$blue-electric:       #1633ff !default;
+$blue-deep:           #0d47a1 !default;
+$cyan:                #00acc1 !default;
+$cyan-light:          #b2ebf2 !default;
+$cyan-electric:       #18ffff !default;
+$cyan-deep:           #006064 !default;
+$teal:                #009688 !default;
+$teal-light:          #b2dfdb !default;
+$teal-electric:       #1de9b6 !default;
+$teal-deep:           #004d40 !default;
+$green:               #8bc34a !default;
+$green-light:         #c5e1a5 !default;
+$green-electric:      #64dd17 !default;
+$green-deep:          #1b5e20 !default;
+$lime:                #cddc39 !default;
+$lime-light:          #e6ee9c !default;
+$lime-electric:       #aeea00 !default;
+$lime-deep:           #827717 !default;
+$yellow:              #fbe30d !default;
+$yellow-light:        #fff59d !default;
+$yellow-deep:         #f9a825 !default;
+$yellow-electric:     #ffff00 !default;
+$orange:              #ef6c00 !default;
+$orange-light:        #ffe0b2 !default;
+$orange-deep:         #e65100 !default;
+$orange-electric:     #ff6d00 !default;
+
+
+// === 2 $brand-colors
+$primary:               $purple !default;
+$primary-light:         $purple-light !default;
+$primary-dark:          $purple-deep !default;
+$primary-electric:      $purple-electric !default;
+
+
+$secondary:             $pink !default;
+$secondary-light:       $pink-light !default;
+$secondary-dark:        $pink-deep !default;
+$secondary-electric:    $pink-electric !default;
+
+$accent:                $teal !default;
+$accent-light:          $teal-light !default;
+$accent-dark:           $teal-deep !default;
+$accent-electric:       $teal-electric !default;
+
+$success:               $green-electric !default;
+$success-muted:         $green-deep !default;
+
+$info:                  $cyan-electric !default;
+$info-muted:            $cyan-deep !default;
+
+$warning:               $orange-electric !default;
+$warning-muted:         $orange-deep !default;
+
+$note:                  $yellow-electric !default;
+$note-muted:            $yellow-deep !default;
+
+$danger:                $red-electric !default;
+$danger-muted:          $red-deep !default;
+
+$mute:                  $purple;
+$light:                 $gray-100 !default;
+$lighter:               $gray-50 !default;
+$lightest:              $gray-00 !default;
+$gray:                  $gray-700 !default;
+$dark:                  $gray-800 !default;
+$darker:                $gray-950 !default;
+$darkest:               $gray-000 !default;
+
+
+// === 1 $colors
+$colors: () !default;
+$colors: map-merge(
+                (
+                        "white":            $white,
+                        "black":            $black,
+                        "red":              $red,
+                        "red-light":        $red-light,
+                        "red-electric":     $red-electric,
+                        "red-deep":         $red-deep,
+                        "pink":             $pink,
+                        "pink-light":       $pink-light,
+                        "pink-electric":    $pink-electric,
+                        "pink-deep":        $pink-deep,
+                        "purple":           $purple,
+                        "purple-light":     $purple-light,
+                        "purple-electric":  $purple-electric,
+                        "purple-deep":      $purple-deep,
+                        "violet":           $violet,
+                        "violet-light":     $violet-light,
+                        "violet-electric":  $violet-electric,
+                        "violet-deep":      $violet-deep,
+                        "indigo":           $indigo,
+                        "indigo-light":           $indigo,
+                        "indigo-electric":           $indigo,
+                        "indigo-dark":           $indigo,
+                        "blue":             $blue,
+                        "blue-light":       $blue-light,
+                        "blue-electric":    $blue-electric,
+                        "blue-dark":        $blue-deep,
+                        "cyan":             $cyan,
+                        "teal":             $teal,
+                        "green":            $green,
+                        "green-light":      $green-light,
+                        "green-electric":   $green-electric,
+                        "green-dark":       $green-deep,
+                        "lime":             $lime,
+                        "yellow":           $yellow,
+                        "yellow-light":     $yellow-light,
+                        "yellow-electric":  $yellow-electric,
+                        "yellow-dark":      $yellow-deep,
+                        "orange":           $orange,
+                        "orange-deep":      $orange-light,
+                        "orange-electric":  $orange-electric,
+                        "orange-dark":      $orange-deep
+                ),
+                $colors
+);
+
+
+// === 2 $brand-colors
+$brand-colors: () ;
+$brand-colors: map-merge(
+    (
+            "primary":              $primary,
+            "primary-light":        $primary-light,
+            "primary-dark":         $primary-dark,
+            "primary-electric":     $primary-electric,
+            "secondary":            $secondary,
+            "secondary-light":      $secondary-light,
+            "secondary-dark":       $secondary-dark,
+            "secondary-electric":   $secondary-electric,
+            "accent":               $accent,
+            "accent-light":         $accent-light,
+            "accent-electric":      $accent-electric,
+            "success":              $success,
+            "success-muted":        $success-muted,
+            "info":                 $info,
+            "info-muted":           $info-muted,
+            "warning":              $warning,
+            "warning-muted":        $warning-muted,
+            "note":                 $note,
+            "note-muted":           $note-muted,
+            "danger":               $danger,
+            "danger-muted":         $danger-muted,
+            "mute":                 $mute,
+            "light":                $light,
+            "lighter":              $lighter,
+            "lightest":              $lightest,
+            "dark":                 $dark,
+            "darker":               $darker,
+            "darkest":              $darkest
+    ),
+    $brand-colors
+);
+
+$brand-color-interval:      8%;
+
+
+

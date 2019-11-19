@@ -1,0 +1,31 @@
+// —————————————————————————————————————————————————————————
+//  Font Face v.1.0.0
+// —————————————————————————————————————————————————————————
+$base-font-formats: woff2 woff !default;     // don't use
+$font-formats: $base-font-formats !default; // use this
+@mixin font-face-adv(
+  $family,                   //  font family name
+  $file,                     //  file name without extention
+  $weight: 400,              //  font weignt 100 – 900
+  $style: normal,            //  font style normal/italic/oblique
+  $formats: $font-formats    // supported file format list
+){
+  @at-root {
+    $src: ();
+    @font-face {
+      font-family: $family + '';
+      @if index($formats, eot)  { src : base-url(font, $file +'.eot'); }
+      @if index($formats, eot)  { $src: append($src, base-url(font, $file +'.eot?#iefix') format('embedded-opentype'), comma) }
+      @if index($formats, woff2){ $src: append($src, base-url(font, $file +'.woff2') format('woff2'),comma);}
+      @if index($formats, woff) { $src: append($src, base-url(font, $file +'.woff') format('woff'),comma);}
+      @if index($formats, ttf)  { $src: append($src, base-url(font, $file +'.ttf') format('truetype'),comma);}
+      src: $src;
+      font-weight : $weight;
+      font-style  : $style;
+
+      //  future implementations
+      // font-stretch: null;     // ie
+      // font-display: null;     // ff in development, chrome experimental
+    }
+  }
+}

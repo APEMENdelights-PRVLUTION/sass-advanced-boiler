@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PURE FLEX-GRID</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="src/scss/main.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<main>
+  <p>MOBILE FIRST CSS3-FLEXBOX-GRID</p>
+  <h2>BASIC GRID AND FLEX SYSTEM </h2>
+  <p></p>
+  <a href="index.html">INDEX</a>
+  <a href="flex-grid.html">FLEX GRID</a>
+  <a href="basic-grid.html">BASIC GRID</a>
+  <a href="spheric-object-bounce.html">SPHERIC BOUNCE</a>
+
+  <!--=========############  1 COLUMN FLEXGRID  ###########========-->
+  <div class="row-flex flex-fill text-centered">
+    <div class="flexible">
+      <div class="flex-box ">
+        "row-flex flex-fill text-centered"> contains 1 "flex-box"
+      </div>
+    </div>
+  </div>
+
+
+  <!--=========############  2 COLUMNS FLEXGRID  ###########========-->
+  <div class="row-flex two-columns text-centered">
+    <div class="flexible">
+      <div class="flex-box">
+        "class="row-flex two-columns text-centered" > contains class="flex-box"
+      </div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of2">
+      </div>
+    </div>
+  </div>
+
+
+  <!--=========############  3 COLUMNS FLEXGRID  ###########========-->
+  <div class="row-flex rasterized three-columns text-centered">
+    <div class="flexible">
+      <div class="flex-box content-1of3">
+      </div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of3">
+      </div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of3">
+      </div>
+    </div>
+  </div>
+
+
+  <!--=========############  4 COLUMNS FLEXGRID  ###########========-->
+  <div class="row-flex rasterized four-columns text-centered">
+    <div class="flexible">
+      <div class="flex-box content-1of4"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of4"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of4"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of4"></div>
+    </div>
+  </div>
+
+
+  <!--=========############  5 COLUMNS FLEXGRID  ###########========-->
+  <div class="row-flex rasterized six-columns text-centered">
+    <div class="flexible">
+      <div class="flex-box content-1of6"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of6"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of6"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of6"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of6"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of6"></div>
+    </div>
+  </div>
+
+
+  <!--=========############  6 COLUMNS FLEXGRID  ###########========-->
+  <div class="row-flex rasterized twelve-columns text-centered">
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box content-1of12"></div>
+    </div>
+  </div>
+  <hr/>
+
+  <!--=========############  VARIABLE BOX-SIZES  ###########========-->
+  <h2>Sidebar and main content</h2>
+
+  <!--=========############  FIRST BOX 6TH  ###########========-->
+  <div class="row-flex rasterized float-1-6">
+    <div class="flexible">
+      <div class="flex-box content-1of6"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box">auto</div>
+    </div>
+  </div>
+
+  <!--=========############  FIRST BOX 4TH  ###########========-->
+  <div class="row-flex rasterized float-1-4">
+    <div class="flexible">
+      <div class="flex-box content-1of4"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box">auto</div>
+    </div>
+  </div>
+
+  <!--=========############  FIRST BOX 3RD  ###########========-->
+  <div class="row-flex rasterized float-1-3">
+    <div class="flexible">
+      <div class="flex-box content-1of3"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box">auto</div>
+    </div>
+  </div>
+  <hr/>
+
+  <!--=========############  FLOAT LEFT/RIGHT  ###########========-->
+  <h2>Horizontal float alignment for offset</h2>
+  <div class="row-flex rasterized float-1-2">
+    <div class="flexible">
+      <div class="flex-box content-1of2"></div>
+    </div>
+  </div>
+
+  <div class="row-flex rasterized float-1-2 justify-center">
+    <div class="flexible">
+      <div class="flex-box content-1of2"></div>
+    </div>
+  </div>
+
+  <div class="row-flex rasterized float-1-2 justify-right">
+    <div class="flexible">
+      <div class="flex-box content-1of2"></div>
+    </div>
+  </div>
+  <hr/>
+
+
+  <h2>Vertical alignment</h2>
+  <div class="row-flex rasterized three-columns align-items-top">
+    <div class="flexible">
+      <div class="flex-box">
+        This cells should be <strong>top-aligned</strong>.
+      </div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle
+        Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck
+        +1 Cosby sweater.
+      </div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's
+        twee
+        you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke
+        Vice,
+        bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually
+        selvage Carles put a bird on it umami vegan ethical.
+
+      </div>
+    </div>
+  </div>
+  <div class="row-flex rasterized three-columns align-items-center">
+    <div class="flexible">
+      <div class="flex-box">This cells should be <strong>center-aligned</strong>.
+      </div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle
+        Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck
+        +1 Cosby sweater.
+      </div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's
+        twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown
+        bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof
+        party, actually selvage Carles put a bird on it umami vegan ethical.
+      </div>
+    </div>
+  </div>
+  <div class="row-flex rasterized three-columns ">
+    <div class="flexible  align-box-bottom">
+      <div class="flex-box">This cells should be <strong>bottom-aligned</strong>.</div>
+    </div>
+    <div class="flexible align-box-center">
+      <div class="flex-box ">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle
+        Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck
+        +1 Cosby sweater.
+      </div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's
+        twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown
+        bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof
+        party, actually selvage Carles put a bird on it umami vegan ethical.
+      </div>
+    </div>
+  </div>
+  <hr/>
+
+
+  <h2>Nesting</h2>
+  <div class="row-flex rasterized float-1-3 nested">
+    <div class="flexible">
+      <div class="flex-box content-1of3"></div>
+    </div>
+    <div class="flexible">
+      <div class="flex-box">
+        <div class="row-flex rasterized float-1-3 nested">
+          <div class="flexible">
+            <div class="flex-box content-1of3"></div>
+          </div>
+          <div class="flexible">
+            <div class="flex-box">
+              <div class="row-flex rasterized float-1-3 nested">
+                <div class="flexible">
+                  <div class="flex-box content-1of3"></div>
+                </div>
+                <div class="flexible">
+                  <div class="flex-box">auto</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr/>
+
+
+  <h2>PSEUDO GRID: THE SYSTEM IN LAYOUT</h2>
+  <p>Note: in responsive view Aside 1 and Aside 2 elements stack below the Main content.</p>
+  <div class="row-flex flex-fill nested header">
+    <div class="flexible">
+      <div class="flex-box">
+        <img src="http://placehold.it/100x50/CC99CC/ffffff&text=Logo" style="vertical-align: middle;"
+             alt="#"><strong> Header / Logo</strong>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row-flex rasterized grid-dynamic">
+    <div class="flexible main">
+      <div class="flex-box">
+        <p class="introduction">
+          <strong>Main</strong><br>
+          CSS has been lacking proper layout mechanisms for far too long. Transitions, animations, filters,
+          all of these are great and useful additions to the language, but they don't address the major
+          problems that Web developers have been complaining about for what seems like an eternity.
+          This site is not another CSS framework. Instead, its purpose is to showcase problems once hard or
+          impossible to solve with CSS alone, now made trivially easy with Flexbox. And with the recent
+          release of Internet Explorer 11 and Safari 6.1, the latest Flexbox spec is now supported in every
+          modern browser.
+        </p>
+      </div>
+    </div>
+    <div class="flexible aside aside-1">
+      <div class="flex-box"><strong>Aside 1</strong><br/>
+        <div class="img-placeholder"></div>
+        <small>As you can see... Thanks to Flexbox, we already had a quite good solution for most of these
+          things. BUT CSS GRID IS CHANGING THE RULES!!!</small>
+      </div>
+    </div>
+    <div class="flexible aside aside-2">
+      <div class="flex-box">
+        <strong>Aside 2</strong>
+        <p>Check out the demos at <a href="https://philipwalton.github.io/solved-by-flexbox/" target="_blank">Philip
+          Walton's Page</a>. View the styles in the Web inspector or dive into the source to see just how easy
+          CSS layout will become once Flexbox becomes mainstream.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row-flex flex-fill">
+    <div class="flexible">
+      <div class="flex-box"><strong>Footer</strong><br/> Copyright &copy; Get your ape on at apemen-delights.de
+      </div>
+    </div>
+  </div>
+  <hr/>
+  <small class="text-right">Read the WC3 documentations for <a href=https://www.w3.org/TR/css-flexbox-1/"
+                                                               target="_blank">Flexboxes</a> and the<a
+      href="https://www.w3.org/TR/css-grid-1/" target="_blank"> CSS Grid. </a></small>
+  <br/>
+</main>
+</body>
+</html>

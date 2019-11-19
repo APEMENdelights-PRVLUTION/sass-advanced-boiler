@@ -1,0 +1,149 @@
+*, *:before, *:after
+  box-sizing: border-box
+
+*::-moz-selection
+  background: yellow
+  +font-semibold
+  outline: 1px solid red
+
+*::selection
+  background: yellow
+  outline: 1px solid red
+
+body
+  font-size: 16px
+  background-color: $color-bg
+  color: $color-text
+
+.main
+  width: 100%
+  max-width: 68rem
+  margin: 6rem auto 10rem
+  padding: 0 1rem
+
+  +small
+    padding: 0 2rem
+    +easeall
+
+  +large 
+    max-width: 90rem
+    margin: 8rem auto 10rem
+    +easeall
+
+ul
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 4rem
+  border-top: 1px solid $color-border
+  border-bottom: 1px solid $color-border
+
+li
+  flex: 1 0 50%
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 1.5rem 0
+  margin: 0 0 -1px 0
+  border-bottom: 1px solid $color-border
+  flex-grow: 0
+  color: $color-white // this sets the icon color
+
+  +small
+    padding: 1.5rem
+    flex: 0 0 33.3333333333%
+    
+  +medium
+    flex: 0 0 25%
+
+  svg
+    color: $color-icons
+
+.top
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  border-bottom: 2px solid $color-border
+  padding: 1rem
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  background-color: rgba($color-bg, .9)
+
+  +medium
+    left: 50%
+    width: 100%
+    max-width: 64rem
+    margin-left: -32rem
+    padding: 1rem 0
+  
+  +large 
+    max-width: 86rem
+    margin-left: -43rem
+    padding: 2rem 0
+    +easeall
+
+h1
+  font-size: 1.25rem
+  text-transform: uppercase
+  color: $color-red
+  +font-bold
+
+  +large
+    font-size: 1.75rem
+
+h2
+  font-size: 1rem
+  +font-semibold 
+  padding: 1rem 0 2rem
+
+  .appended
+    font-size: .75em
+    color: $color-red
+    +font-regular
+
+  +large
+    font-size: 1.25rem
+    padding: 3rem 0
+
+h3
+  font-size: .675rem
+  text-align: left
+  line-height: 1.35em
+  margin-left: 1rem
+  color: $color-text
+  +font-regular
+
+  +small
+    margin-left: 1rem
+    font-size: .75rem
+
+  +large
+    font-size: .875rem
+
+.is-visible
+  display: inline
+
+.is-hidden
+  display: none
+
+p
+  font-size: .75rem
+  +font-regular
+
+a 
+  color: $color-text
+
+hr
+  border: none
+  border-bottom: 2px solid $color-border
+  margin: 7rem 0 2rem
+
+.avatar
+  float: left
+  border-radius: 50%
+  width: 20px
+  height: 20px
+  margin-top: -4px
+  margin-right: .5rem
+

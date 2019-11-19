@@ -1,0 +1,171 @@
+/* ===##################### 04-LAYOUT/_GRIDBASE.SCSS
+===========================================*/
+
+
+//$phone: 576px; // DEFAULT FOR MOBILE FIRST
+//$tablet: 768px;
+//$notebook: 990px;
+//$laptop: 1200px;
+
+@function templateRow($list) {
+  $resultString: "";
+
+  @for $i from 1 through length($list) {
+    @if $i % 2 != 0 {
+      $count: nth($list, $i);
+      @for $j from 1 through $count {
+        $resultString: $resultString + " " + nth($list, $i+1);
+      }
+    }
+  }
+  @return $resultString;
+}
+
+
+%grid {
+  display:          grid;
+  grid-column-gap:  15px;
+  grid-template-columns: repeat(12, 1fr);
+  z-index: 1;
+
+  @media (min-width: $notebook) {
+    grid-column-gap: $padding-md;
+    grid-template-columns:  repeat(12, 1fr) ;
+    //grid-template-columns: auto repeat(12, minmax(0px, 65px)) auto;
+  }
+
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 $fullwidth-padding 0 $fullwidth-padding;
+  flex: 1 1 100%;
+  padding-top: 1.5 * $padding-xl;
+  line-height: 1.4;
+}
+
+.three-columns {
+
+  @extend %grid;
+  grid-template-areas:
+          templateRow((12, "col1"))
+          templateRow((12, "col2"))
+          templateRow((12, "col3"))
+          templateRow((12, "col4"))
+          templateRow((12, "col5"))
+          templateRow((12, "col6"));
+  .col1, .col2, .col3, .col4,.col5, .col6{
+    margin-bottom: 10px;
+  }
+  @media (min-width: $tablet) {
+    grid-template-areas:
+            templateRow((4, "col1", 4, "col2", 4, "col3"))
+            templateRow((4, "col4", 4, "col5", 4, "col6"));
+
+    .col1, .col2, .col3, .col4,.col5, .col6{
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (min-width: $notebook) {
+    grid-template-areas:
+            templateRow((4, "col1", 4, "col2", 4, "col3"))
+            templateRow((4, "col4", 4, "col5", 4, "col6"));
+  }
+
+}
+
+.six-columns {
+
+  @extend %grid;
+  grid-template-areas:
+          templateRow((6, "col1", 6, "col2"))
+          templateRow((6, "col3", 6, "col4"))
+          templateRow((6, "col5", 6, "col6"));
+  .col1, .col2, .col3, .col4,.col5, .col6{
+    margin-bottom: 10px;
+  }
+  @media (min-width: $tablet) {
+    grid-template-areas:
+            templateRow((4, "col1", 4, "col2", 4, "col3"))
+            templateRow((4, "col4", 4, "col5", 4, "col6"));
+
+    .col1, .col2, .col3, .col4,.col5, .col6{
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (min-width: $notebook) {
+    grid-template-areas: templateRow(
+                            (2, "col1", 2, "col2", 2, "col3", 2, "col4", 2, "col5", 2, "col6")
+    );
+  }
+
+}
+
+
+/* The Code component */
+.code-columns {
+
+  @extend %grid;
+  grid-template-areas:
+          templateRow((13, "description"))
+          templateRow((13, "editor"))
+          templateRow((13, "result"));
+
+  @media (min-width: 768px) {
+    grid-template-areas: templateRow(
+                            (5, "description", 5, "editor", 3, "result")
+    );
+  }
+
+  padding-bottom: 60px;
+}
+
+
+
+// col 1of2
+.col-1of2 {
+  float: left;
+  width: 50%;
+  padding: 0 2em;
+  min-height: 300px;
+  position: relative;
+  text-align: right;
+}
+
+
+// to grid
+.col-1of2:nth-child(2) {
+  box-shadow: -1px 0 0 rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.col-1of2 p {
+  font-weight: 300;
+  font-size: 2em;
+  padding: 0 0 0.5em;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 46.0625em) {
+  .col-1of2 {
+    width: 100%;
+    min-width: auto;
+    min-height: auto;
+    padding: 2em;
+    text-align: center;
+  }
+
+  .col-1of2 p {
+    font-size: 1.5em;
+  }
+
+  .col-1of2:nth-child(2) {
+    text-align: center;
+    box-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+  }
+}

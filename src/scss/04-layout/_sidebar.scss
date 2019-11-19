@@ -1,0 +1,282 @@
+/* ===##################### 04-LAYOUT/_SIDEBAR.SCSS
+===========================================*/
+
+.push-content {
+  overflow-y: scroll;
+  background: $body-bg;
+}
+
+.push-content,
+.push-content-inner {
+  position: relative;
+}
+
+.push-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.pusher {
+  position: relative;
+  left: 0;
+  z-index: 99;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+
+  &::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: $body-bg;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  }
+}
+
+.sidebar-menu-open .pusher::after {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.sidebar-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  visibility: hidden;
+  height: 100%;
+  background: $sidebar-bg;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  float: left;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+  }
+
+  h3 {
+    margin: 0;
+    padding: $padding-lg $padding-sm $padding-sm $padding-md;
+    color: $primary-electric;
+    text-shadow: 0 0 1px rgba(0,0,0,0.1);
+    font-weight: $font-weight-lg;
+    font-size: $font-size-lg;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: $sidebar-bg-hover;
+    content: '';
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+  }
+
+}
+
+.sidebar-menu-open .sidebar-menu::after {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+
+/* SIDEBAR MENU STYLE */
+
+.sidebar-menu ul li {
+
+  a {
+  display: block;
+  padding: 0 $padding-md $padding-xs $padding-lg;
+  outline: none;
+  box-shadow: inset 0 -1px rgba($light, 0.2);
+  color: $link-color;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+  letter-spacing: 2px;
+  font-weight: 400;
+  -webkit-transition: background 0.3s, box-shadow 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
+
+    &:first-child {
+      box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
+      padding: $padding-md $padding-md $padding-md $padding-md;
+
+    }
+
+    &:hover{
+      background: rgba(0,0,0,0.2);
+      box-shadow: inset 0 -1px rgba(0,0,0,0);
+      color: $link-hover-color;
+    }
+  }
+}
+
+
+/* Sidebar: toolBar Animation */
+
+.toolBar .push-container {
+  -webkit-perspective:$perspCamera-max;
+  perspective: $perspCamera-max;
+}
+
+.toolBar .pusher {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.toolBar.sidebar-menu-open .pusher {
+  -webkit-transform: translate3d(0, 0, -90px);
+  transform: translate3d(0, 0, -90px);
+}
+
+.toolBar.sidebar-menu {
+
+  width: 90px;
+  opacity: 1;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  ul:first-child{
+    padding-top: 80px;
+  }
+  a{
+    padding: $padding-lg;
+    font-size: $font-size-xl;
+
+  }
+
+}
+
+.toolBar.sidebar-menu-open .toolBar.sidebar-menu {
+  visibility: visible;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.toolBar.sidebar-menu::after {
+  display: none;
+}
+
+/* Sidebar: Scale up */
+
+.scaleUp.push-container {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+  -webkit-perspective-origin: 0% 50%;
+  perspective-origin: 0% 50%;
+}
+
+.scaleUp.sidebar-menu-open .pusher {
+  -webkit-transform: translate3d(210px, 0, 0);
+  transform: translate3d(210px, 0, 0);
+}
+
+.scaleUp.sidebar-menu {
+  width: $sidebar-width;
+
+  z-index: 1;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, -210px);
+  transform: translate3d(0, 0, -210px);
+}
+
+.scaleUp.sidebar-menu-open .scaleUp.sidebar-menu {
+  visibility: visible;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* Sidebar: Scale and rotate pusher */
+
+.push3D.push-container {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+}
+
+.push3D .pusher {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.push3D.sidebar-menu-open .pusher {
+  -webkit-transform: translate3d(100px, 0, -420px) rotateY(-20deg);
+  transform: translate3d(100px, 0, -420px) rotateY(-20deg);
+}
+
+.push3D.sidebar-menu {
+  width: $sidebar-width;
+
+  opacity: 1;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+.push3D.sidebar-menu-open .push3D.sidebar-menu {
+  visibility: visible;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.push3D.sidebar-menu::after {
+  display: none;
+}
+
+/* Effect 12: Open door */
+
+.scale3D.push-container {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+}
+
+.scale3D .pusher {
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.scale3D.sidebar-menu-open .pusher {
+  -webkit-transform: rotateY(-10deg);
+  transform: rotateY(-10deg);
+}
+
+.scale3D.sidebar-menu {
+  width: $sidebar-width;
+
+  opacity: 1;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  &::after {
+    display: none;
+  }
+}
+
+.scale3D.sidebar-menu-open .scale3D.sidebar-menu {
+  visibility: visible;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}

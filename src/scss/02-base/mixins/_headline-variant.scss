@@ -1,0 +1,42 @@
+
+@mixin headline-font-variant-lg {
+  @if $enable-headline-variant {
+    font-family: $font-heading-lg;
+  } @else {
+    font-family: $font-heading-safe;
+  }
+}
+
+
+@mixin headline-font-variant-md {
+  @if $enable-headline-variant {
+    font-family: $font-heading-md;
+  } @else {
+    font-family: $font-heading-safe;
+  }
+}
+
+@mixin headline-font-variant-sm {
+  @if $enable-headline-variant {
+    font-family: $font-heading-sm;
+  } @else {
+    font-family: $font-heading-safe;
+  }
+}
+
+@mixin headline-font-variant-xs {
+  @if $enable-headline-variant {
+    color: $font-intro;
+  } @else {
+    font-family: $font-heading-safe;
+  }
+}
+
+
+@mixin headline-color-variant {
+  @if $enable-headline-color-variant {
+    color: $headline-color-variant;
+  } @else {
+    color: $headline-color;
+  }
+}

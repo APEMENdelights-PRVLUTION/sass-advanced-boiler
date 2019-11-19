@@ -1,0 +1,30 @@
+// —————————————————————————————————————————————————————————
+//  Font size mixin v.1.0.0
+// —————————————————————————————————————————————————————————
+//  default font scale bounding
+$font-lock-min: 320px !default;
+$font-lock-max: 960px !default;
+
+
+//  font-size
+@mixin font-size(
+  $min,                         // font-size
+  $max: null,                   // optional maximum font size
+  $lock-min: $font-lock-min,  // optional minimum viewport width
+  $lock-max: $font-lock-max   // optional maximum viewport width
+){
+  $min: px($min);
+  $max: if($max, px($max), $max);
+  & { font-size: $min; }
+  @if $max {
+    @media (min-width: $lock-min) and (max-width: $lock-max){
+      & { font-size: calc(#{$min} +  #{num($max) - num($min)} *  (100vw - #{$lock-min}) /  #{num($lock-max) - num($lock-min)} );  }
+    }
+    @media (min-width: $lock-max){ & { font-size: $max; } }
+  }
+}
+//  keep close to number function
+@function num($input){ @return $input/($input * 0 + 1); }
+
+
+

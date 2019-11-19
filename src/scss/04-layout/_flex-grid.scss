@@ -1,0 +1,104 @@
+
+/* 04-LAYOUT/_FLEXGRID.SCSS
+=============================== */
+
+.row-flex {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.flexible {
+  flex: 1;
+}
+
+.flex-box {
+  padding: .8em 1em 0; // TODO repl. by variables
+  margin-bottom: $flexbox-margin;
+  background-color: $boxlayer-1;
+  transition: background-color 0.75s ease-in-out;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-xs;
+  &:after {
+    content: "";
+    display: block;
+    margin-top: $flexbox-margin;
+    height: 1px;
+  }
+  &:hover {
+    background-color: $boxlayer-0;
+  }
+}
+
+.flex-box.dynamix {
+  background-color: $boxlayer-1;
+  &:hover {
+    background-color: $info;
+    color: $boxlayer-0;
+  }
+}
+
+
+/*
+FLEXROW ADD GUTTER
+*/
+
+.rasterized {
+  margin-left: -$flexbox-margin;
+  .flexible {
+    @media screen and (min-width: $tablet){
+      padding-left: $flexbox-padding-min;
+    }
+  }
+  .nested {
+    .flexible:first-of-type {
+      .flex-box {
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+/*
+FLEXROW ITEMS ALIGN
+*/
+
+/* Horizontal alignment per row */
+.justify-left {
+  justify-content: flex-start;
+}
+.justify-right {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-between;
+}
+
+/* Vertical alignment per row */
+.align-items-top {
+  align-items: flex-start;
+}
+.align-items-bottom {
+  align-items: flex-end;
+}
+.align-items-center {
+  align-items: center;
+}
+
+/* Alignment per cell */
+.align-box-top {
+  align-self: flex-start;
+}
+.align-box-bottom {
+  align-self: flex-end;
+}
+.align-box-center {
+  align-self: center;
+}
+

@@ -1,0 +1,24 @@
+/* 04-LAYOUT/_CROPPER.SCSS
+==============================*/
+.content-wrap {
+  height: auto;
+  margin: 0 auto (-1*$fullwidth-padding);
+  min-height: 99%;
+  padding: 0 0 $fullwidth-padding;
+}
+
+.help-row {
+  padding:  $fullwidth-padding 0 $fullwidth-padding 0;
+  background-color: #1A1A1A;
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-height: 220px;
+  &:hover{
+    background-color: #2a2a2a;
+    -webkit-transition: background-color 800ms ease-in;
+    -ms-transition: background-color 800ms ease-in;
+    transition: background-color 800ms ease-in;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+}
+

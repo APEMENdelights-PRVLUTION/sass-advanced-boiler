@@ -1,0 +1,105 @@
+/* _BLOCKQUOTES.SCSS
+=============================== */
+
+//$boxlayer-02: #474747;
+$t-clockwise: 15s;
+//todo seamless engage
+.animated-border-quote {
+  display:inline-block;
+  margin:1em;
+  max-width:20em;
+  overflow:hidden;
+  blockquote {
+    background-color: $boxlayer-2;
+    border: solid 5px $primary-electric;
+    display: inline-block;
+    margin: 0;
+    padding: 1em;
+    position: relative;
+    &:before {
+      animation:clockwise $t-clockwise infinite linear;
+      background-color: $boxlayer-2;
+      bottom:10%;
+      content: "";
+      left: 0;
+      opacity:.5;
+      position: absolute;
+      right: 0;
+      top:10%;
+    }
+    &:after {
+      animation:counter $t-clockwise infinite linear;
+      background-color: $boxlayer-2;
+      bottom:10%;
+      content: "";
+      left: 0;
+      opacity:.5;
+      position: absolute;
+      right: 0;
+      top:10%;
+    }
+    cite {
+      display: block;
+      font-style: italic;
+      text-align: right;
+      &:before {
+        content: "- ";
+      }
+    }
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+@keyframes clockwise {
+  0% {
+    transform:rotate(0);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes counter {
+  0% {
+    transform:rotate(0);
+  }
+  100% {
+    transform:rotate(-360deg);
+  }
+}
+
+.animated-shadow-quote {
+  background-color: $boxlayer-2;
+  display:inline-block;
+  margin:1em;
+  max-width:20em;
+  position:relative;
+  blockquote {
+    animation:shadows 2s linear infinite alternate;
+    display:inline-block;
+    margin:0;
+    padding:1em;
+    cite {
+      display: block;
+      font-style: italic;
+      text-align: right;
+      &:before {
+        content: "- ";
+      }
+    }
+  }
+}
+
+@keyframes shadows {
+  0% {
+    box-shadow:0 2px 4px -2px rgba(0,0,0,.25);
+    transform:scale(.95);
+  }
+  100% {
+    box-shadow:0 0 4px 2px rgba(0,0,0,.25);
+    transform:scale(1);
+  }
+}

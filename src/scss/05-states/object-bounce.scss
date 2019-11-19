@@ -1,0 +1,139 @@
+html,body {
+  max-height:100vh;
+  min-height:100%;
+}
+@mixin bg-crawl-R2L($bg-width, $dur-bg-animation, $iterationCount){
+  @keyframes bg-Crawl-R2L {
+    0% {
+      background-position:0 0;
+    }
+    100%{
+      background-position:-$bg-width 0;
+    }
+  }
+  // object.style.animation = "name duration timingFunction delay iterationCount direction fillMode playState"
+  animation: bg-Crawl-R2L $dur-bg-animation linear $iterationCount;
+  // usage: body {
+  //  background-image:linear-gradient(transparent,transparent 350px,rgba(white,.9) 350px,rgba(black,.8)), url('../assets/textures/stars_dzyjfk.jpg');
+  //  background-position:0 0;
+  //  background-size:2000px auto;
+  //  //animation: bg-Crawl-R2L 60s linear infinite;
+  //  @include bg-crawl-R2L(2000px, 60s, infinite)
+  //}
+}
+
+body {
+  background-image:linear-gradient(transparent,transparent 350px,rgba(white,.9) 350px,rgba(black,.8)), url('../../assets/textures/stars_dzyjfk.jpg');
+  background-position:0 0;
+  background-size:2000px auto;
+  animation: bg-Crawl-R2L 60s linear infinite;
+}
+
+$dur-bounce-animation: .5s;
+$animated-sphere-scope: 125px;
+$animated-sphere-scope-box-shadow: $animated-sphere-scope * 0.5;
+$margin-top-animation: 350px;
+
+.sphere {
+  width: $animated-sphere-scope;
+  height: $animated-sphere-scope;
+  margin:$margin-top-animation auto 0 auto;
+  border-radius:100%;
+  background: url('../../assets/textures/earthmap.jpg') 0 0 repeat;
+  background-size:cover;
+  position:relative;
+  animation:object-bounce $dur-bounce-animation cubic-bezier(0.165, 0.840, 0.440, 1.000) alternate infinite, sphere-spin-360 6s linear infinite, object-rotation 12s linear infinite;
+  z-index:1;
+}
+
+.sphere-shadow {
+  width: $animated-sphere-scope;
+  height: $animated-sphere-scope;
+  margin:$margin-top-animation auto 0 auto;
+  border-radius:100%;
+  box-shadow:0 0 $animated-sphere-scope-box-shadow 0 rgba(#0085ff,.6);
+  background-image:linear-gradient( transparent,rgba(black,.9)), radial-gradient(circle at top, transparent 0, rgba(white,.09) 90px, transparent 90px, transparent);
+  position:absolute;
+  animation:object-bounce $dur-bounce-animation cubic-bezier(0.165, 0.840, 0.440, 1.000) alternate infinite;
+  left:50%;
+  margin-left:-$animated-sphere-scope-box-shadow;
+  z-index:2;
+}
+
+.ground-shadow {
+  margin:-10px auto 0;
+  width:100px;
+  height:20px;
+  background:rgba(0,0,0,.1);
+  border-radius:100%;
+  animation: object-bounce-shadow .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) infinite alternate;
+  position:relative;
+  z-index:0;
+}
+
+@keyframes object-bounce {
+  0% {
+    top:0;
+  }
+  100% {
+    top:-200px;
+  }
+}
+
+@keyframes object-bounce-shadow {
+0% {
+	transform: scale(.5);
+  background-color:rgba(0,0,0,.2);
+	}
+100% {
+	transform: scale(1.1);
+  background-color:rgba(0,0,0,.05);
+	}
+}
+
+@keyframes sphere-spin-360 {
+  0% {
+    transform:rotate(0);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
+@mixin bg-crawl-R2L($bg-width, $dur-bg-animation){
+  @keyframes bg-Crawl-R2L {
+    0% {
+      background-position:0 0;
+    }
+    100%{
+      background-position:-$bg-width 0;
+    }
+  }
+  animation: bg-Crawl-R2L $dur-bg-animation linear infinite;
+}
+
+@keyframes bg-Crawl-R2L {
+  0% {
+    background-position:0 0;
+  }
+  100%{
+    background-position:-2000px 0;
+  }
+}
+
+@keyframes bg-Crawl-L2R {
+  0% {
+    background-position:0 0;
+  }
+  100%{
+    background-position:2000px 0;
+  }
+}
+
+@keyframes object-rotation {
+  0% {
+    background-position:0 0;
+  }
+  100%{
+    background-position:-800px 0;
+  }
+}

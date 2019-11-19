@@ -1,0 +1,74 @@
+@import "07-vendor/bourbon";
+
+/* ===========####### STYLE.SCSS #######===============
+============###### TABLE OF CONTENT ######=============
+
+1. TYPOGRAPHICS
+2. RESETS
+
+=====================================================*/
+
+
+@import "01-abstracts/abstracts";
+@import "01-abstracts/my-mixins";
+@import "02-base/mixins";
+
+
+@import "02-base/mixins/demomode";
+
+$enable-demo-modus:                 false;
+$enable-headline-variant:           false;
+$enable-headline-color-variant:     true;
+
+
+//=========#######  COMMON STYLES  #######========
+
+// TODO test assets position in  production, it may be that it is better to store them into 'src/assets'
+@import "02-base/typographics";
+@import "../assets/flaticons";
+@import "../assets/flaticon-multimedia-collection";
+@import "../css/linecons";
+@import "02-base/base";
+//@    import "02-base/glowingKeyframes";
+
+
+//=========####### THEME MODULES  #######========
+
+@import "03-modules/helperclasses";
+@import "03-modules/buttons";
+@import "03-modules/button";
+@import "03-modules/images";
+@import "03-modules/blockquotes";
+@import "03-modules/card-perspective";
+@import "03-modules/modal-bokeh";
+//@import "03-modules/logo";
+
+
+
+//=========####### THEME LAYOUT  #######========
+
+//@import "01-abstracts/depreciated/wrapper";
+@import "04-layout/sidebar";
+@import "04-layout/cropper";
+@import "04-layout/container-workspace";
+
+@import "04-layout/gridbase";
+@import "04-layout/columns";
+@import "04-layout/flex-grid";
+@import "04-layout/flex-responsive";
+@import "04-layout/header";
+
+
+
+
+
+//@import "01-abstracts/animations";
+//@import "05-states/pagestates";
+//@import "01-abstracts/pt-delays";
+//
+//@import "03-modules/multilevel";
+
+
+
+/* Components (these could be broken out into a SCSS file for each component) */
+

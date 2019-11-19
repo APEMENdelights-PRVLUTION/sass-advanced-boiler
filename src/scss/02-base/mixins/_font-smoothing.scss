@@ -1,0 +1,10 @@
+// —————————————————————————————————————————————————————————
+//  Font smoothing v.1.0.0
+//  antialiased/grayscale      light text + dark background
+//  subpixel-antialiased/auto  default
+// —————————————————————————————————————————————————————————
+@mixin font-smoothing($on-off: on) {
+  -webkit-font-smoothing : if($on-off == on, antialiased, subpixel-antialiased);
+  -moz-osx-font-smoothing: if($on-off == on, grayscale, auto);
+}
+

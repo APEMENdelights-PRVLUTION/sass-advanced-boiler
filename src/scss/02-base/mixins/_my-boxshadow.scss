@@ -1,0 +1,7 @@
+@mixin box-shadow($offset-x, $offset-y, $offset-blur, $color, $opacity){
+  $shadowOffset-x: ($offset-x) * 1px;
+  $shadowOffset-y: ($offset-y) * 1px;
+  $blur: ($offset-blur) * 1px;
+  box-shadow: $shadowOffset-x $shadowOffset-y $blur rgba($color, $opacity);
+}
+
